@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact
+{% endblock title %}
+
+{% block body %}
+ <div class="conatainer-fluid px-4 mb-3">
+    <img src="https://media.istockphoto.com/id/1416335096/photo/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address.jpg?s=612x612&w=0&k=20&c=ajOYHJPqlaKZ04BeSf5m3MsuZ_YGyxrUqEGMaS1hGGk=" class="d-block w-100 my-4 h-50" alt="..."></div>
+ </div>
+    <div class="container">
+      <h1 class='text-center'>Contact US</h1>
+    <form method="post" action="/contact">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="name" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <textarea class="form-control" id="phone" name="phone" placeholder="enter your Phone number"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="desc">Tell me what you wantto contact me for...</label>
+        <textarea class="form-control" id="desc" name="desc"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-danger">Reset</button>
+    </form>
+</div>
+<div>
+  
+</div>
+{% endblock body %}
